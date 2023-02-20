@@ -1,0 +1,14 @@
+.text-green {
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#head1 {
+  background: grey;
+  color: black;
+}
+
+.img {
+  width: 300px;
+  height: 150px;
+  object-fit: contain;
+}
