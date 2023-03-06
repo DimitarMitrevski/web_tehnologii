@@ -4,6 +4,7 @@
     <title>HTML Multimedia</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
@@ -30,6 +31,12 @@
       src="/videos/video.mp4"
     ></iframe>
     <br /><br /><br /><br />
+    <div
+      data-aos="fade-right"
+      style="width: 200px; height: 100px; background: black; color: white"
+    >
+      This is div tag with animation
+    </div>
 
     <h3>iframe (youtube)</h3>
     <iframe
@@ -112,23 +119,20 @@
     <embed src="/audios/muzika.mp3" type="audio/mp3" />
     <hr />
     <h3>Симнување на содржина</h3>
-    <a href="/videos/video.mp4" download="true">Download Video</a>
-    <a href="/audios/muzika.mp3" download="true">Download Audio </a>
+    <a href="/videos/video.mp4" download>Download Video</a>
+    <a href="/audios/muzika.mp3" download>Download Audio </a>
     <hr />
     <h3>SVG Animation</h3>
     <div class="animation">
       <svg class="fade-in" viewBox="0 0 600 400">
-        <text
-          class="txtTitle"
-          text-anchor="middle"
-          x="50%"
-          y="50%"
-          dy="50px"
-          class="text"
-        >
+        <text class="txtTitle" text-anchor="middle" x="50%" y="50%" dy="50px">
           SVG Text
         </text>
       </svg>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
