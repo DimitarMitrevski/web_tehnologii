@@ -1,0 +1,35 @@
+.animation {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.animation {
+  background-color: #151515;
+  font-family: Arial, sans-serif;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+
+.txtTitle {
+  fill: #f6f6f6;
+}
+
+svg {
+  position: absolute;
+  width: 99%;
+  height: 50%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+svg {
+  animation: fadeIn 1s ease-in infinite alternate;
+}

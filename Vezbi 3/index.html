@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Multimedia</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+
+  <body>
+    <h1 style="color: blue">Video</h1>
+    <h3>Object (local video)</h3>
+    <object data="/videos/video.mp4" width="420" height="300"></object>
+    <br /><br /><br /><br />
+
+    <h3>Embed (local video)</h3>
+    <embed width="420" height="300" src="/videos/video.mp4" />
+    <br /><br /><br /><br />
+
+    <h3>Комбинација од Object и Embed (local video)</h3>
+    <object data="/videos/video.mp4" width="420" height="300">
+      <embed src="/videos/video.mp4" width="420" height="300" />
+    </object>
+    <br /><br /><br /><br />
+
+    <h3>iframe (local)</h3>
+    <iframe
+      width="420"
+      height="300"
+      frameborder="0"
+      src="/videos/video.mp4"
+    ></iframe>
+    <br /><br /><br /><br />
+
+    <h3>iframe (youtube)</h3>
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/Ax8ye9jucsc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <br /><br /><br /><br />
+
+    <h3>embed (youtube)</h3>
+    <embed
+      width="420"
+      height="300"
+      src="https://www.youtube-nocookie.com/embed/Ax8ye9jucsc"
+    />
+    <br /><br /><br /><br />
+
+    <h3>iframe (dailymotion)</h3>
+    <iframe
+      width="420"
+      height="300"
+      frameborder="0"
+      src="https://www.dailymotion.com/embed/video/x88nn2x"
+    ></iframe>
+    <br /><br /><br /><br />
+
+    <h3>embed (dailymotion)</h3>
+    <embed
+      width="420"
+      height="300"
+      src="https://www.dailymotion.com/embed/video/x88nn2x"
+    />
+    <br /><br /><br /><br />
+
+    <h3>object (youtube)</h3>
+    <object
+      data="https://www.youtube-nocookie.com/embed/Ax8ye9jucsc"
+      width="420"
+      height="300"
+    >
+      <!--<embed src="/videos/video.mp4" width="40" height="300">-->
+    </object>
+    <br /><br /><br /><br />
+
+    <h3>object (dailymotion)</h3>
+    <object
+      data="https://www.dailymotion.com/embed/video/x88nn2x"
+      width="420"
+      height="300"
+    >
+      <!--<embed src="/videos/video.mp4" width="40" height="300">-->
+    </object>
+    <br /><br /><br /><br />
+
+    <h3>HTML5 video (local)</h3>
+
+    <video width="320" height="240" controls>
+      <source src="/videos/video.mp4" type="video/mp4" />
+      <source src="/videos/video.ogv" type="video/ogg" />
+      <source src="/videos/video.m4v" type="video/mp4" />
+    </video>
+
+    <br /><br /><br /><br />
+    <hr />
+    <h3>Audio</h3>
+    <h2>Audio tag во HTML5</h2>
+    <audio width="320" height="50" controls>
+      <source src="/audios/muzika.mp3" type="audio/mp3" />
+      <source src="/audios/muzika.wav" type="audio/wav" />
+    </audio>
+    <h2>Object tag</h2>
+    <object data="/audios/muzika.mp3" type="audio/mp3">
+      <!--<embed src="/audios/muzika.mp3" width="40" height="300">-->
+    </object>
+    <h2>Embed tag</h2>
+    <embed src="/audios/muzika.mp3" type="audio/mp3" />
+    <hr />
+    <h3>Симнување на содржина</h3>
+    <a href="/videos/video.mp4" download="true">Download Video</a>
+    <a href="/audios/muzika.mp3" download="true">Download Audio </a>
+    <hr />
+    <h3>SVG Animation</h3>
+    <div class="animation">
+      <svg class="fade-in" viewBox="0 0 600 400">
+        <text
+          class="txtTitle"
+          text-anchor="middle"
+          x="50%"
+          y="50%"
+          dy="50px"
+          class="text"
+        >
+          SVG Text
+        </text>
+      </svg>
+    </div>
+  </body>
+</html>

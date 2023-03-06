@@ -19,6 +19,7 @@
       src="/raster/bitola_flag.png"
       alt="Грб на Општина Битола"
       height="200px"
+      style="background-color: green"
       title="Грб на Општина Битола"
     />
     <h2>Webp формат</h2>
@@ -81,7 +82,7 @@
         style="
           fill: blue;
           stroke: pink;
-          stroke-width: 5;
+          stroke-width: 15;
           fill-opacity: 0.1;
           stroke-opacity: 0.9;
         "
@@ -99,14 +100,14 @@
     <iframe src="/vector/red_blue_squares.svg"></iframe>
     <hr />
     <h1>HTML Canvas example</h1>
-    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <canvas id="myCanvas" width="400" height="100"></canvas>
     <script type="text/javascript">
       var canvas = document.getElementById("myCanvas");
       var ctx = canvas.getContext("2d");
       ctx.font = "30px Arial";
-      ctx.fillText("Zdravo FIKT!", 10, 50);
-      ctx.fillStyle = "#FF0000";
-      ctx.fillRect(10, 60, 150, 75);
+      ctx.fillText("Zdravo FIKT!", 200, 50);
+      ctx.fillStyle = "blue";
+      ctx.fillRect(125, 60, 75, 75);
     </script>
   </body>
 </html>
