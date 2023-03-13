@@ -1,6 +1,4 @@
-$color-1: rgb(60, 120, 150);
-$size-1: 60px;
-$base-color: red;
+@use "variables";
 
 @mixin link-style {
   background-color: saturate($color-1, 5%);

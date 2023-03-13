@@ -1,35 +1,50 @@
-@color-1: rgb(60, 120, 150);
+@color-1: rgb(230, 202, 23);
 @size-1: 60px;
 @base-color: red;
+@color-red: darkred;
+@color-yellow: yellow;
+@color-green: darkgreen;
 
 .link-style {
-	background-color: saturate(@color-1, 5%);
-	padding:25px;
-	color: white;
-	text-decoration: none;
-	text-transform: uppercase;
-	&:hover {background-color: saturate(@color-1, 20%)}
+  background-color: saturate(@color-1, 5%);
+  padding: 25px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    background-color: saturate(@color-1, 100%);
+  }
 }
 
 #div_header {
-	h1 {
-		color: @color-1;
-		font-size: @size-1
-	}
-	
-	img {
-		height: 250px;
-	}
-	
-	nav {
-		background-color: lighten(@base-color, 30%);
-		display:inline-block;
-		padding: 20px;
-		margin-bottom:40px;
-		overflow:hidden;
-		
-		a {
-			.link-style()
-		}
-	}
+  @media screen and (min-width: 500px) {
+    background-color: @color-green;
+  }
+  @media screen and (min-width: 800px) {
+    background-color: @color-yellow;
+  }
+  @media screen and (min-width: 1200px) {
+    background-color: @color-red;
+  }
+
+  h1 {
+    color: @color-1;
+    font-size: @size-1;
+  }
+
+  img {
+    height: 250px;
+  }
+
+  nav {
+    background-color: lighten(@base-color, 30%);
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+
+    a {
+      .link-style();
+    }
+  }
 }
