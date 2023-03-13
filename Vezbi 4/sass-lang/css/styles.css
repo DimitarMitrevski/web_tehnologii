@@ -1,0 +1,35 @@
+/* line 17, ../../Desktop/FIKT/Demonstaror/Web Tehnologii/Vezbi 4/sass-lang/sass/styles.scss */
+#div_header h1 {
+  color: #3c7896;
+  font-size: 60px;
+}
+
+/* line 22, ../../Desktop/FIKT/Demonstaror/Web Tehnologii/Vezbi 4/sass-lang/sass/styles.scss */
+#div_header img {
+  height: 250px;
+}
+
+/* line 26, ../../Desktop/FIKT/Demonstaror/Web Tehnologii/Vezbi 4/sass-lang/sass/styles.scss */
+#div_header nav {
+  background-color: #ff9999;
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+/* line 33, ../../Desktop/FIKT/Demonstaror/Web Tehnologii/Vezbi 4/sass-lang/sass/styles.scss */
+#div_header nav a {
+  background-color: #377a9b;
+  padding: 25px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 11, ../../Desktop/FIKT/Demonstaror/Web Tehnologii/Vezbi 4/sass-lang/sass/styles.scss */
+#div_header nav a:hover {
+  background-color: #277fab;
+}
+
+/*# sourceMappingURL=styles.css.map */

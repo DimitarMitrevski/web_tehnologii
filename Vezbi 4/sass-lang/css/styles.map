@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"../sass/styles.scss"
+	],
+	"sourcesContent": [
+		"$color-1: rgb(60, 120, 150);\r\n$size-1: 60px;\r\n$base-color: red;\r\n\r\n@mixin link-style {\r\n  background-color: saturate($color-1, 5%);\r\n  padding: 25px;\r\n  color: white;\r\n  text-decoration: none;\r\n  text-transform: uppercase;\r\n  &:hover {\r\n    background-color: saturate($color-1, 20%);\r\n  }\r\n}\r\n\r\n#div_header {\r\n  h1 {\r\n    color: $color-1;\r\n    font-size: $size-1;\r\n  }\r\n\r\n  img {\r\n    height: 250px;\r\n  }\r\n\r\n  nav {\r\n    background-color: lighten($base-color, 30%);\r\n    display: inline-block;\r\n    padding: 20px;\r\n    margin-bottom: 40px;\r\n    overflow: hidden;\r\n\r\n    a {\r\n      @include link-style();\r\n    }\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": ";AAeA,AACE,WADS,CACT,EAAE,CAAC;EACD,KAAK,EAjBC,OAAiB;EAkBvB,SAAS,EAjBJ,IAAI;CAkBV;;;AAJH,AAME,WANS,CAMT,GAAG,CAAC;EACF,MAAM,EAAE,KAAK;CACd;;;AARH,AAUE,WAVS,CAUT,GAAG,CAAC;EACF,gBAAgB,EAAE,OAAyB;EAC3C,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,IAAI;EACnB,QAAQ,EAAE,MAAM;CAKjB;;;AApBH,AAiBI,WAjBO,CAUT,GAAG,CAOD,CAAC,CAAC;EA3BJ,gBAAgB,EAAE,OAAsB;EACxC,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,KAAK;EACZ,eAAe,EAAE,IAAI;EACrB,cAAc,EAAE,SAAS;CAyBtB;;;AAnBL,AALE,WAKS,CAUT,GAAG,CAOD,CAAC,AAtBF,MAAM,CAAC;EACN,gBAAgB,EAAE,OAAuB;CAC1C"
+}
