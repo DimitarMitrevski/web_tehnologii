@@ -1,4 +1,4 @@
-@use "variables";
+@import "variables";
 
 @mixin link-style {
   background-color: saturate($color-1, 5%);
@@ -19,6 +19,7 @@
 
   img {
     height: 250px;
+    width: $img-size;
   }
 
   nav {

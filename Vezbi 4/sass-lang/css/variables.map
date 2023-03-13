@@ -5,7 +5,7 @@
 		"../sass/variables.scss"
 	],
 	"sourcesContent": [
-		"$color-1: rgb(0, 255, 17);\r\n$size-1: 60px;\r\n$base-color: red;\r\n"
+		"$color-1: rgb(229, 255, 0);\r\n$size-1: 60px;\r\n$base-color: red;\r\n"
 	],
 	"names": [],
 	"mappings": ""
