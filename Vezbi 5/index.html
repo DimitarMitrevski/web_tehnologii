@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ФИКТ</title>
+    <meta charset="utf-8" />
+    <style>
+      /*body {background-color:red}*/
+      #a_btn {
+        display: inline-block;
+        margin-top: 30px;
+        background: blue;
+        color: white;
+        padding: 10px 25px;
+      }
+      #a_btn:hover {
+        cursor: pointer;
+        background: lightblue;
+        color: black;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="div_container">
+      <!-- 1. Текст и HTML елемент генериран со JavaScript -->
+      <script>
+        //document.write("Обичен текст генериран со JavaScript");
+        document.write(
+          "<h1>Овој &lt;h1&gt; елемент e генериран со JavaScript</h1>"
+        );
+      </script>
+
+      <hr />
+
+      <!-- 2. Содржина на постоечки HTML елемент -->
+      <h2 id="fikt">Почетна содржина на овој H2 елемент.</h2>
+      <script>
+        document.getElementById("fikt").innerHTML =
+          "Содржината на овој постоечки &lt;h2&gt; елемент е генерирана со JavaScript";
+      </script>
+
+      <hr />
+
+      <!-- 3. P елемент генериран со JavaScript -->
+      <script>
+        // Варијанта 1
+
+        var new_p1 = document.createElement("p");
+        new_p1.innerHTML = "Содржина на P елемент генериран со JS (new_p1)";
+        //document.body.appendChild(new_p1);
+        document.getElementById("div_container").appendChild(new_p1);
+
+        //Варијанта 2
+        let new_p2 = document.createElement("p");
+        let div_cont = document.getElementById("div_container");
+        new_p2.innerHTML = "Содржина на P елементот генериран со JS (new_p2)";
+        div_cont.appendChild(new_p2);
+      </script>
+
+      <hr />
+
+      <!-- 4. Прикажување на вредност -->
+      <h3 id="input_text" style="color: blue; font-weight: bold">
+        &lt;h3&gt; елемент
+      </h3>
+      <form onSubmit="return false">
+        <input type="text" id="form_input" placeholder="Внесете текст" />
+        <br /><br />
+        <button onclick="show_input()">Прикажи</button>
+      </form>
+      <script>
+        function show_input() {
+          let tekst = document.getElementById("form_input").value;
+          document.getElementById("input_text").innerHTML = tekst;
+        }
+      </script>
+
+      <hr />
+
+      <!-- 5. Дополнување на содржина на HTML елементи -->
+      <p>p1:</p>
+      <p>p2:</p>
+      <p>p3:</p>
+      <p>p4:</p>
+      <p>p5:</p>
+      <button onclick="p1()">ЗА &lt;p&gt; 1</button>
+      <button onclick="p2()">ЗА &lt;p&gt; 2</button>
+      <button onclick="p3()">ЗА &lt;p&gt; 3</button>
+      <button onclick="p4()">ЗА &lt;p&gt; 4</button>
+      <button onclick="p5()">ЗА &lt;p&gt; 5</button>
+      <script>
+        document.getElementsByTagName("p")[2].innerHTML +=
+          " Елемент избран по Tag Name";
+        function p1() {
+          let x = document.getElementsByTagName("p");
+          x[2].innerHTML += " Click!";
+        }
+        function p2() {
+          let x = document.getElementsByTagName("p");
+          x[3].innerHTML += " Click!";
+        }
+        function p3() {
+          let x = document.getElementsByTagName("p");
+          x[4].innerHTML += " Click!";
+        }
+        function p4() {
+          let x = document.getElementsByTagName("p");
+          x[5].innerHTML += " Click!";
+        }
+        function p5() {
+          let x = document.getElementsByTagName("p");
+          x[6].innerHTML += " Click!";
+        }
+      </script>
+
+      <hr />
+
+      <!-- 7. Користење на jQuery -->
+      <a id="a_btn" class="cls-btn">jQuery Button</a>
+      <script>
+        $(document).ready(function () {
+          // Селектирање на HTML елемент по id
+          $("#a_btn").click(function () {
+            $("#fikt").css("background-color", "yellow");
+          });
+
+          // Селектирање на HTML елемент по class
+          $(".cls-btn").click(function () {
+            $("#fikt").text("Ова е jQuery генериран Текст!");
+          });
+        });
+      </script>
+
+      <!-- 8. Динамичко додавање на елеменит во HTML DOM преку JavaScript -->
+      <hr />
+      <h1>Динамичко додавање на елементи преку JavaScript</h1>
+      <form id="form-add">
+        <input type="text" id="add_input" placeholder="Внесете нов елемент" />
+        <br /><br />
+        <button type="submit">Додај</button>
+      </form>
+      <div id="element-div-list">
+        <p>Prv element</p>
+      </div>
+      <script>
+        const form = document.getElementById("form-add");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          let inputEl = document.getElementById("add_input");
+          let newElement = document.createElement("p");
+          newElement.append(inputEl.value);
+          inputEl.value = "";
+          document.getElementById("element-div-list").appendChild(newElement);
+        });
+      </script>
+    </div>
+    <!-- 6. Event Listener -->
+    <script src="funkcii.js"></script>
+  </body>
+</html>
