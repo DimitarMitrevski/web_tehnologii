@@ -27,7 +27,7 @@
       <script>
         //document.write("Обичен текст генериран со JavaScript");
         document.write(
-          "<h1>Овој &lt;h1&gt; елемент e генериран со JavaScript</h1>"
+          "<h1>Овој &lt;h1&gt; елемент e генериран со JavaScript &pound;</h1>"
         );
       </script>
 
@@ -36,8 +36,10 @@
       <!-- 2. Содржина на постоечки HTML елемент -->
       <h2 id="fikt">Почетна содржина на овој H2 елемент.</h2>
       <script>
-        document.getElementById("fikt").innerHTML =
-          "Содржината на овој постоечки &lt;h2&gt; елемент е генерирана со JavaScript";
+        setTimeout(() => {
+          document.getElementById("fikt").innerHTML =
+            "Содржината на овој постоечки &lt;h2&gt; елемент е генерирана со JavaScript";
+        }, 2000);
       </script>
 
       <hr />
@@ -47,7 +49,10 @@
         // Варијанта 1
 
         var new_p1 = document.createElement("p");
+        //<p></p>
+
         new_p1.innerHTML = "Содржина на P елемент генериран со JS (new_p1)";
+        //<p>Содржина на P елемент генериран со JS (new_p1)</p>
         //document.body.appendChild(new_p1);
         document.getElementById("div_container").appendChild(new_p1);
 
@@ -94,6 +99,7 @@
           " Елемент избран по Tag Name";
         function p1() {
           let x = document.getElementsByTagName("p");
+          console.log(x);
           x[2].innerHTML += " Click!";
         }
         function p2() {
@@ -118,6 +124,7 @@
 
       <!-- 7. Користење на jQuery -->
       <a id="a_btn" class="cls-btn">jQuery Button</a>
+
       <script>
         $(document).ready(function () {
           // Селектирање на HTML елемент по id
@@ -149,13 +156,16 @@
           e.preventDefault();
           let inputEl = document.getElementById("add_input");
           let newElement = document.createElement("p");
-          newElement.append(inputEl.value);
+          newElement.innerHTML = inputEl.value;
           inputEl.value = "";
-          document.getElementById("element-div-list").appendChild(newElement);
+          document.getElementById("element-div-list").prepend(newElement);
         });
       </script>
     </div>
+    <h1 id="h1-element"></h1>
     <!-- 6. Event Listener -->
+
     <script src="funkcii.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
