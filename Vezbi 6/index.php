@@ -27,6 +27,7 @@
     </form>
 	
 	<?php 
+
 		if (isset($_GET['indeks'])) {
 			//echo $_GET['indeks'];
 			//echo count($php_json_object->studenti);
