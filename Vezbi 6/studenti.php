@@ -9,6 +9,7 @@
 <body>
     <h2>Сите студенти</h2>
     <?php 
+      //$-variabla(promenliva), moze da ni bide bilo koj tip string, integer itn.
     	$json_file = file_get_contents('studenti.json');
         $php_json_object1 = json_decode($json_file);
     ?>
@@ -16,9 +17,21 @@
 <?php
 $studenti =  $php_json_object1->studenti;
 for ($s = 0; $s < count($studenti); $s++) {
+ //concatenate + in other programming languages in PHP is .    
 echo '<li>'.$studenti[$s]->indeks.' '.$studenti[$s]->ime.' '.$studenti[$s]->prezime.'</li>';
 }
+
 ?>
    </ol>
+   <hr/>
+ <h2>Оценки</h2>
+ <ul>
+    <?php 
+    for($o=0; $o < count($php_json_object1->ocenki); $o++ ){
+    echo '<li>'.'<b>Предмет</b>: '.$php_json_object1->ocenki[$o]->predmet.' <b>Оценка</b>: '.$php_json_object1->ocenki[$o]->ocenka;
+    }
+    
+    ?>
+ </ul>
 </body>
 </html>

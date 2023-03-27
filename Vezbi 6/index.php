@@ -18,7 +18,7 @@
 	?>
 	
 	<h1 id="univerzitet">Универзитет: <?php echo $php_json_object->univerzitet ?></h1>
-    <h2 id="fakultet"><?php echo $php_json_object->fakultet->ime; ?></h2>
+    <h2 id="fakultet"><?php echo $php_json_object->fakultet->ime; ?> | <?php echo $php_json_object->fakultet->adresa ?></h2>
 	
 	<form method="get" action="/" style="text-align:right; background-color:lightblue; width:400px; padding:30px">
     <label for="id_indeks">Индекс</label>
