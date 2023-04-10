@@ -8,6 +8,7 @@ body {
   font-family: "Press Start 2P";
   src: url("./Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
 }
+
 /* CSS specifity 100*/
 #gallery {
   display: flex;
@@ -42,6 +43,13 @@ body {
   color: red;
 }
 
+#lista_predmeti li:nth-child(3) {
+  color: orange;
+}
+#lista_predmeti li:first-child,
+#lista_predmeti li:last-child {
+  color: blueviolet;
+}
 /* Употреба на pseudo класа hover за додавање на CSS својство при преминување врз елементот со курсорот*/
 #paragraf:hover {
   transition: 1s;

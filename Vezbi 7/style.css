@@ -2,13 +2,19 @@ body {
   font-family: Arial, Tahoma, Verdana, sans-serif;
   margin: 0;
 }
-
+/* ID 100 */
 #div_header {
   width: 90%;
   height: 80px;
   background-color: #efefef;
   padding: 0 5% 0;
   position: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Courier New", Courier, monospace;
 }
 
 h1 {
