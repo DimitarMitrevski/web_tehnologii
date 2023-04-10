@@ -1,22 +1,24 @@
-/* Импортирање на фонт од Google Fonts начин бр.1 */
+/* Импортирање на фонт од Google Fonts начин бр.2 */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 body {
   font-family: "Oswald", sans-serif;
+}
+/* Импортирање на локален фонт начин бр.3 */
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("./Press_Start_2P/PressStart2P-Regular.ttf") format("truetype");
 }
 /* CSS specifity 100*/
 #gallery {
   display: flex;
 }
 
-/* CSS specifity 100 + 10 + 1 + 1 = 112 */
+/* CSS specifity 100 + 1 + 10 + 1 = 112 */
 #gallery div.img > img {
   width: 200px;
   height: 200px;
   margin: 10px;
   object-fit: cover;
-}
-/* CSS specifity 1*/
-img {
   border-radius: 10px;
 }
 
