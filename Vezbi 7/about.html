@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="about.css" />
+    <title>За ФИКТ</title>
+    <!-- Импортирање на фонт од Google Fonts начин бр.2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>За Факултетот за информатички и комуникациски технологии</h1>
+      <nav></nav>
+    </header>
+    <main>
+      <p id="paragraf">Ова е некој параграф со фонтот Oswald од Google Fonts</p>
+      <div id="gallery">
+        <div class="img">
+          <img src="/images/tree.jpg" alt="Tree" />
+        </div>
+
+        <div class="img">
+          <!-- Највисока CSS specifity имаме со inline CSS -->
+          <img src="/images/uklo.jpg" alt="UKLO" style="border-radius: 50%" />
+        </div>
+      </div>
+      <h2>Листа на предмети</h2>
+      <ul id="lista_predmeti">
+        <li>Структурирано програмирање</li>
+        <li>Објектно Ориентирано програмирање</li>
+        <li>Напредно програмирање</li>
+        <li>Веб технологии</li>
+        <li>Веб програмирање</li>
+        <li>Структурирани бази на податоци</li>
+      </ul>
+    </main>
+    <footer>
+      <div class="info">
+        <p id="kontakt_info">Контакт информации</p>
+        <address style="font-family: 'Lobster', cursive">
+          Партизанска бб, Битола 7000
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>

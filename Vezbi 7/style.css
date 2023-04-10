@@ -1,0 +1,50 @@
+body {font-family: Arial, Tahoma, Verdana, sans-serif; margin: 0}
+
+#div_header {width:90%; height: 80px; background-color: #efefef; padding:0 5% 0; position:fixed}
+
+h1 {font-size:14px; display:inline}
+h2 {font-size:16px; display:inline}
+
+#div_header img {margin-top:10px; margin-right:5px}
+
+#div_header nav {display: block; float: right; }
+
+#div_header nav a {display: inline-block; height: 80px; margin: 0; line-height: 80px;
+padding:0 30px; text-decoration: none; color: black; text-transform: uppercase;}
+
+#div_header nav a:hover {background-color: #c6c6c6; color: white}
+
+#div_banner, #div_content {padding:0 5% 0}
+#div_banner img {width:100%}
+
+footer {width:92%; height: 160px; background-color: SlateBlue; text-align:center; color: white; padding:4%}
+
+/*The Cascade
+p {background-color:red}
+p {background-color:yellow}
+p {background-color:blue}*/
+
+/*Specificity
+#inki {background-color:red}
+p {background-color:yellow}*/
+
+/*Kombiniranje*/
+.studiski-programi p.ikt {background-color:yellow}
+.studiski-programi p {background-color:red}
+
+/*Children
+.studiski-programi > p {background-color:yellow}*/
+
+#div_buttons {padding:0 5% 0; margin: 40px 0}
+
+.btn {display: inline-block; height: 40px; line-height: 40px; text-decoration: none; padding:0 16px; border-radius:4px}
+.btn-primary {background-color:DodgerBlue; color:white}
+.btn-primary:hover {background-color:#0B5ED7}
+.btn-warning {background:#ffc107; color:black}
+.btn-warning:hover {background:#FFCA2C}
+
+
+
+
+
+
