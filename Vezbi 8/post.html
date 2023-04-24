@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single post</title>
+  </head>
+  <body>
+    <p><a href="/">&laquo; Back to all posts</a></p>
+    <h1 id="heading">Showing post with id:</h1>
+    <h2 id="title"></h2>
+    <p id="body"></p>
+    <script>
+      let postId = new URL(document.location).searchParams.get("id");
+      document.getElementById("heading").innerText += postId;
+      fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+        method: "GET",
+        headers: {
+          "Content-type": "application/json",
+          Accept: "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          document.getElementById("title").innerText = res.title;
+          document.getElementById("body").innerText = res.body;
+        });
+    </script>
+  </body>
+</html>
