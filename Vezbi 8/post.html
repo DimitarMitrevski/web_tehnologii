@@ -13,6 +13,7 @@
     <p id="body"></p>
     <script>
       let postId = new URL(document.location).searchParams.get("id");
+      //AJAX асинхрон повик
       document.getElementById("heading").innerText += postId;
       fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
         method: "GET",
