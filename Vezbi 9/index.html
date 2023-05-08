@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+    <style>
+      .display-json,
+      .display-xml {
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Користење на AJAX за читање на JSON документ</h2>
+    <button id="btn-json">Read JSON</button>
+    <button id="btn-json-list">Make a list</button>
+    <p class="display-json"></p>
+    <div id="list"></div>
+    <script type="text/javascript">
+      const btn = document.getElementById("btn-json");
+      const btn_list = document.getElementById("btn-json-list");
+      function ajaxJSONCall(action) {
+        let xhr = new XMLHttpRequest();
+
+        // Making our connection
+        let url = "/cars.json";
+        xhr.open("GET", url, true);
+
+        // function execute after request is successful
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            if (action === 1) {
+              document.querySelector("p.display-json").innerText =
+                this.responseText;
+            } else if (action === 2) {
+              const list = document.getElementById("list");
+              let ol = document.createElement("ol");
+              const carList = JSON.parse(this.responseText);
+              for (let car of carList) {
+                let li = document.createElement("li");
+                li.append(`${car.brand} ${car.model}`);
+                ol.appendChild(li);
+              }
+              list.appendChild(ol);
+              let h2 = document.createElement("h2");
+              h2.innerText = "List of Cars";
+              list.insertBefore(h2, ol);
+            }
+          }
+        };
+        // Sending our request
+        xhr.send();
+      }
+      btn.onclick = () => ajaxJSONCall(1);
+      btn_list.onclick = () => {
+        btn_list.disabled = true;
+        ajaxJSONCall(2);
+      };
+    </script>
+    <hr />
+    <h2>Користење на AJAX за читање на XML документ</h2>
+    <button id="btn-xml">Read XML</button>
+    <button id="btn-xml-list">Make a list</button>
+    <p class="display-xml"></p>
+    <h2 hidden>List of books</h2>
+    <ol id="xml-list"></ol>
+    <script type="text/javascript">
+      const btn_xml = document.getElementById("btn-xml");
+      const btn_xml_list = document.getElementById("btn-xml-list");
+      function ajaxXMLCall(display = 0) {
+        let xhr = new XMLHttpRequest();
+
+        // Making our connection
+        let url = "/books.xml";
+        xhr.open("GET", url, true);
+
+        // function execute after request is successful
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            if (display === 1) {
+              //if btn_xml is clicked.
+              document.querySelector("p.display-xml").innerText =
+                this.responseText;
+            } else if (display === 2) {
+              //if btn_xml_list is clicked.
+              const xmlList = document.getElementById("xml-list");
+              let parser = new DOMParser();
+              let xmlDoc = parser.parseFromString(
+                this.responseText,
+                "text/xml"
+              );
+              let books = xmlDoc.getElementsByTagName("book");
+
+              document.querySelector("h2[hidden]")?.removeAttribute("hidden");
+              for (let book of books) {
+                let li = document.createElement("li");
+                const name = book.children[0].innerHTML;
+                const author = book.children[1].innerHTML;
+                li.append(`Book name: ${name} | Author: ${author}`);
+                xmlList.appendChild(li);
+              }
+            }
+          }
+        };
+        // Sending our request
+        xhr.send();
+      }
+      btn_xml.onclick = () => ajaxXMLCall(1);
+      btn_xml_list.onclick = () => {
+        btn_xml_list.disabled = true;
+        ajaxXMLCall(2);
+      };
+    </script>
+  </body>
+</html>
