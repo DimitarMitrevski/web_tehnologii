@@ -13,13 +13,11 @@ router.get("/students", async (ctx: any) => {
 });
 
 router.post("/add/student", async (ctx: any) => {
-  // const std = await JSON.parse(await Deno.readTextFile("./studenti.json"));
   const reqBody = await ctx.request.body().value;
   const std = await JSON.parse(await Deno.readTextFile("./studenti.json"));
   std.studenti.push(reqBody);
   await Deno.writeTextFile("./studenti.json", JSON.stringify(std));
   ctx.response.body = "OK";
-  //ctx.response.body = JSON.stringify(std.studenti);
 });
 
 app.use(router.routes());
