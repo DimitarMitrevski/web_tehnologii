@@ -1,0 +1,17 @@
+{
+"univerzitet":"&ldquor;Св. Климент Охридски&rdquor; - Битола",
+"fakultet":{"ime":"Факултет за информатички и комуникациски технологии", "adresa":"Студентска б.б.", "email":"contact@fikt.edu.mk"},
+"studenti":[
+	{"indeks":"ИНКИ1", "ime":"Петар", "prezime":"Петров"},
+	{"indeks":"ИНКИ2", "ime":"Јована", "prezime":"Јовановска"},
+	{"indeks":"ИНКИ3", "ime":"Стефан", "prezime":"Стефановски"}
+	],
+"ocenki":[
+	{"indeks":"ИНКИ1", "predmet":"Веб технологии", "ocenka":8},
+	{"indeks":"ИНКИ1", "predmet":"Математика", "ocenka":10},
+	{"indeks":"ИНКИ1", "predmet":"Програмирање", "ocenka":9},
+	{"indeks":"ИНКИ2", "predmet":"Програмирање", "ocenka":7},
+	{"indeks":"ИНКИ2", "predmet":"Бази на податоци", "ocenka":6},
+	{"indeks":"ИНКИ3", "predmet":"Претприемништво", "ocenka":8}
+	]
+}

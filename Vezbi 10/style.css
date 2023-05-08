@@ -1,0 +1,5 @@
+#img:hover {opacity: 0.8}
+
+h1:first-child {color: red; font-weight:bold; font-size:100px}
+
+/*body > h1:first-child {color: red; font-weight:bold; font-size:100px}*/
