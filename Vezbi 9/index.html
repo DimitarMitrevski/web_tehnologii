@@ -17,6 +17,7 @@
     <button id="btn-json">Read JSON</button>
     <button id="btn-json-list">Make a list</button>
     <p class="display-json"></p>
+    <!-- Nov element -->
     <div id="list"></div>
     <script type="text/javascript">
       const btn = document.getElementById("btn-json");
@@ -70,13 +71,14 @@
       const btn_xml = document.getElementById("btn-xml");
       const btn_xml_list = document.getElementById("btn-xml-list");
       function ajaxXMLCall(display = 0) {
+        //1. Initialize (create new XMLHttpRequest object)
         let xhr = new XMLHttpRequest();
 
-        // Making our connection
+        // 2. Making our connection
         let url = "/books.xml";
         xhr.open("GET", url, true);
 
-        // function execute after request is successful
+        // 3. function execute after request is successful
         xhr.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
             if (display === 1) {
@@ -104,7 +106,7 @@
             }
           }
         };
-        // Sending our request
+        // 4. Sending our request
         xhr.send();
       }
       btn_xml.onclick = () => ajaxXMLCall(1);
