@@ -1,0 +1,14 @@
+body {
+  background: #13a89e;
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 0 10%;
+}
+
+a {
+  color: #fff;
+}

@@ -1,0 +1,49 @@
+.tekst {
+  color: blue;
+}
+.pasus {
+  font-size: 30px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  flex: 50%;
+  padding: 50px;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-yellow {
+  background-color: yellow;
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    background-color: lightblue;
+  }
+  .tekst {
+    color: red;
+  }
+  .pasus {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-color: black;
+  }
+  .tekst {
+    color: white;
+  }
+  .pasus {
+    font-size: 40px;
+  }
+
+  table td {
+    color: white;
+  }
+}
