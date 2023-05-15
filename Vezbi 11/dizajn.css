@@ -20,6 +20,25 @@
   background-color: yellow;
 }
 
+/* GRID example */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  padding: 10px;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+/* GRID example - END */
+
 @media only screen and (min-width: 700px) {
   body {
     background-color: lightblue;
